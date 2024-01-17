@@ -21,6 +21,9 @@ import CartComponent from "../Screens/components/CartComponent";
 import ScreenA from "../Screens/components/ScreenA";
 import ScreenB from "../Screens/components/ScreenB";
 import { CartProvider } from "../Screens/components/CartContex";
+import OutletImage from "../Screens/OutletImage";
+import Merchandise from "../Screens/Merchandise";
+import TakeSignature from "../Screens/TakeSignature";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -43,16 +46,14 @@ const RetailExecutionScreenStack = () => {
           component={RetailExecutionScreen}
         />
         <Stack.Screen name="TaskScreen" component={TaskScreen} />
+        <Stack.Screen name="Outlet Image" component={OutletImage} />
         <Stack.Screen
-          name="InventoryCheckTask"
+          name="Inventory Check"
           component={InventoryCheckTaskScreen}
         />
+        <Stack.Screen name="Merchandise" component={Merchandise} />
         <Stack.Screen
-          name="ProductReturnTask"
-          component={ProductReturnTaskScreen}
-        />
-        <Stack.Screen
-          name="OrderTask"
+          name="Order Capture"
           component={OrderTaskScreen}
           options={{
             headerRight: () => (
@@ -68,6 +69,13 @@ const RetailExecutionScreenStack = () => {
           }}
         />
         <Stack.Screen name="CartComponent" component={CartComponent} />
+        <Stack.Screen name="Take Signature" component={TakeSignature} />
+        <Stack.Screen
+          name="Product Return"
+          component={ProductReturnTaskScreen}
+        />
+        
+        
       </Stack.Navigator>
     </CartProvider>
   );

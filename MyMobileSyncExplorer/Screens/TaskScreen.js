@@ -9,10 +9,12 @@ const TaskScreen = ({ route }) => {
 
   // Updated tasks data
   const tasksData = [
-    { id: '1', taskName: 'Inventory Check' },
-    { id: '2', taskName: 'Product Return' },
-    { id: '3', taskName: 'Order' },
-    // Add more tasks as needed
+    { id: '1', taskName: 'Outlet Image' },
+    { id: '2', taskName: 'Inventory Check' },
+    { id: '3', taskName: 'Merchandise' },
+    { id: '4', taskName: 'Order Capture' },
+    { id: '5', taskName: 'Take Signature' },
+    { id: '6', taskName: 'Product Return' },
   ];
 
   // Timer state
@@ -68,15 +70,24 @@ const TaskScreen = ({ route }) => {
     // Navigate to the respective task screen based on taskId
     switch (taskId) {
       case '1':
-        navigation.navigate('InventoryCheckTask');
+        navigation.navigate('Outlet Image');
         break;
       case '2':
-        navigation.navigate('ProductReturnTask');
+        navigation.navigate('Inventory Check');
         break;
       case '3':
-        navigation.navigate('OrderTask');
+        navigation.navigate('Merchandise');
         break;
-      // Add conditions for additional tasks here
+      case '4':
+        navigation.navigate('Order Capture');
+        break;
+      case '5':
+        navigation.navigate('Take Signature');
+        break;
+      case '6':
+        navigation.navigate('Product Return');
+        break;
+      
     }
   };
 
